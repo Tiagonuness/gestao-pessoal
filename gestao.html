@@ -9,30 +9,63 @@
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <section>
-        <div class="menu-box">
-            <div class="menu-value">
+    <section id="tela-de-login">
+        <div class="menubox">
+            <div class="menu login">
+                <h2>Login</h2>
                 <form action="">
-                    <h2>Login</h2>
                     <div class="inputbox">
-                        <input type="email" required>
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="email-input" required>
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
-                        <input type="password" required>
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" id="password-input" required>
                         <label for="">Senha</label>
                     </div>
-                    <div class="lembre">
-                        <label for=""><input type="checkbox">Lembre de mim</label>
-                        <a href="#">Esqueceu sua senha?</a>
+                    <div class="remember">
+                        <label><input type="checkbox">Mantenha-me conectado</label>
+                        <a href="#">Perdeu a senha?</a>
                     </div>
-                    <button>Login</button>
-                    <div class="registrar">
-                        <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="registrar-login">
+                        <p>Ainda não tem uma conta? <a href="#" class="registrar-link">Cadastre-se</a></p>
                     </div>
                 </form>
             </div>
-        </div>
+
+            <div class="menu registrar">
+                <h2>Cadastro</h2>
+                <form action="">
+                    <div class="inputbox">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" required>
+                        <label>Nome de Usuário</label>
+                    </div>
+                    <div class="inputbox">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" id="email-input" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox">Eu li e concordo com os termos de uso</label>
+                    </div>
+                    <button type="submit" class="btn">Cadastrar</button>
+                    <div class="registrar-login">
+                        <p>Já tem uma conta? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+
+        <script src="ativar.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </section>
 </body>
 </html>

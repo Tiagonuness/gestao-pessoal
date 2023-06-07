@@ -16,10 +16,10 @@ body {
     width: 100%;
 }
 
-.menu-box {
+.menubox {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 400px;
     background: transparent;
     box-shadow: -3px 1px 15px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -27,10 +27,146 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
 } 
 
-h2 {
+.menubox.active {
+    height: 470px;
+}
+
+.menubox .menu {
+    width: 100%;
+    padding: 50px;
+}
+
+.menubox .menu.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.menubox.active .menu.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.menubox .menu.registrar {
+    position: absolute;
+    transition: none;
+    transform: translateX(450px);
+}
+
+.menubox.active .menu.registrar {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.menu h2 {
     font-size: 2em;
     color: white;
     text-align: center;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.418);
+    font-style: italic;
+}
+
+.inputbox {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: 30px 0;
+}
+
+.inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputbox input:focus~label,
+.inputbox input:valid~label {
+    top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.inputbox .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    line-height: 57px;
+}
+
+.remember {
+    font-size: .9em;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember label input {
+    accent-color: rgb(255, 255, 255);
+    margin-right: 3px;
+}
+
+.remember a {
+    color: rgb(255, 255, 255);
+    text-decoration: none ;
+}
+
+.remember a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+.registrar-login {
+    font-size: .9em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.registrar-login p a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registrar-login p a:hover {
+    text-decoration: underline;
 }
