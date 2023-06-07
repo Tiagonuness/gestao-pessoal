@@ -10,25 +10,38 @@ loginlink.addEventListener('click', ()=> {
     menubox.classList.remove('active');
 })
 
-// -------- EMAIL INPUT EXEMPLO -------- //
-const emailInput = document.getElementById('email-input');
+const inputsemail = document.querySelectorAll('.email-input[type="email"]');
 
-emailInput.addEventListener('focus', function() {
-  emailInput.setAttribute('placeholder', 'exemplo@email.com');
+inputsemail.forEach(input => {
+  input.addEventListener('focus', function() {
+    this.classList.add('placeholder-focused');
+  });
+
+  input.addEventListener('blur', function() {
+    this.classList.remove('placeholder-focused');
+  });
 });
 
-emailInput.addEventListener('blur', function() {
-  emailInput.removeAttribute('placeholder');
+const inputspassword = document.querySelectorAll('.password-input[type="password"]');
+
+inputspassword.forEach(input => {
+  input.addEventListener('focus', function() {
+    this.classList.add('placeholder-focused');
+  });
+
+  input.addEventListener('blur', function() {
+    this.classList.remove('placeholder-focused');
+  });
 });
 
-// -------- SENHA INPUT EXEMPLO -------- //
-const passwordInput = document.getElementById('password-input');
+const inputusuario = document.querySelectorAll('.nomedeusuario[type="text"]');
 
-passwordInput.addEventListener('focus', function() {
-    passwordInput.setAttribute('placeholder', 'abcd1234');
+inputusuario.forEach(input => {
+  input.addEventListener('focus', function() {
+    this.classList.add('placeholder-focused');
+  });
+
+  input.addEventListener('blur', function() {
+    this.classList.remove('placeholder-focused');
+  });
 });
-
-passwordInput.addEventListener('blur', function() {
-    passwordInput.removeAttribute('placeholder');
-});
-

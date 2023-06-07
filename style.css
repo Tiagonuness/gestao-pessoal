@@ -68,6 +68,24 @@ body {
 }
 
 ::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.email-input.placeholder-focused::placeholder {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.418);
+    font-style: italic;
+}
+
+.password-input.placeholder-focused::placeholder {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.418);
+    font-style: italic;
+}
+
+.nomedeusuario.placeholder-focused::placeholder {
+    opacity: 1;
     color: rgba(255, 255, 255, 0.418);
     font-style: italic;
 }
