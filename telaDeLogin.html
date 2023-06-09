@@ -15,20 +15,20 @@
                 <h2>Login</h2>
                 <form action="">
                     <div class="inputbox">
-                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" class="email-input" placeholder="Exemplo: exemplo@email.com" required>
-                        <label for="">Email</label>
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" id="nomedeusuario-login" class="nomedeusuario" placeholder="Exemplo: João123" autocomplete="off" required>
+                        <label>Nome de Usuário</label>
                     </div>
                     <div class="inputbox">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" class="password-input" placeholder="Exemplo: abcd1234" required>
+                        <input type="password" class="password-input" id="password-login" placeholder="Exemplo: abcd1234" autocomplete="off" required>
                         <label>Senha</label>
                     </div>
                     <div class="remember">
                         <label><input type="checkbox">Mantenha-me conectado</label>
                         <a href="#">Perdeu a senha?</a>
                     </div>
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" onclick="logar(); return false" class="btn">Login</button>
                     <div class="registrar-login">
                         <p>Ainda não tem uma conta? <a href="#" class="registrar-link">Cadastre-se</a></p>
                     </div>
@@ -40,23 +40,23 @@
                 <form action="">
                     <div class="inputbox">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" class="nomedeusuario" placeholder="Nome que gostaria de ser chamado" required>
+                        <input type="text" id="nomedeusuario-cadastro" class="nomedeusuario" placeholder="Nome que gostaria de ser chamado" autocomplete="off" required>
                         <label>Nome de Usuário</label>
                     </div>
                     <div class="inputbox">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" class="email-input" placeholder="Exemplo: exemplo@email.com" required>
+                        <input type="email" id="email-cadastro" class="email-input" placeholder="Exemplo: exemplo@email.com" autocomplete="off" required>
                         <label for="">Email</label>
                     </div>
                     <div class="inputbox">
                         <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                        <input type="password" class="password-input" placeholder="Exemplo: abcd1234" required>
+                        <input type="password" id="password-cadastro" class="password-input" placeholder="Exemplo: abcd1234" autocomplete="off" required>
                         <label>Senha</label>
                     </div>
-                    <div class="remember">
-                        <label><input type="checkbox">Eu li e concordo com os termos de uso</label>
+                    <div class="termos">
+                        <label><input type="checkbox" id="termos">Eu li e concordo com os termos de uso</label>
                     </div>
-                    <button type="submit" class="btn">Cadastrar</button>
+                    <button type="submit" id="btn-cad" onclick="cadastro(); return false" class="btn">Cadastrar</button>
                     <div class="registrar-login">
                         <p>Já tem uma conta? <a href="#" class="login-link">Login</a></p>
                     </div>
@@ -66,6 +66,10 @@
         <script src="ativar.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </section>
+
+    <section>
+        <script src="dados.js"></script>
     </section>
 </body>
 </html>

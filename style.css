@@ -135,7 +135,7 @@ body {
     line-height: 57px;
 }
 
-.remember {
+.remember, .termos {
     font-size: .9em;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -144,17 +144,17 @@ body {
     justify-content: space-between;
 }
 
-.remember label input {
+.remember label input, .termos label input {
     accent-color: rgb(255, 255, 255);
     margin-right: 3px;
 }
 
-.remember a {
+.remember a, .termos a {
     color: rgb(255, 255, 255);
     text-decoration: none ;
 }
 
-.remember a:hover {
+.remember a:hover, .termos a:hover {
     text-decoration: underline;
 }
 
