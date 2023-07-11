@@ -79,7 +79,7 @@ class BinaryTree:
         return 1 + max(self.profundidade(no.esquerda), self.profundidade(no.direita))
     
     def balancear(self):            #O(n) e 1 parada
-        if arvore.balanco() <= 1:
+        if arvore.balanco() <= 1:  as
             return "É balanceada"
         else:
             return "Não está balanceada"
